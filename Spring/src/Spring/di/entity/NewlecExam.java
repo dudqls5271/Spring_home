@@ -1,4 +1,4 @@
-package Spring.id.entity;
+package Spring.di.entity;
 
 public class NewlecExam implements Exam {
 	

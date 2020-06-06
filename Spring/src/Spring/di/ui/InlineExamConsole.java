@@ -1,6 +1,6 @@
-package Spring.id.ui;
+package Spring.di.ui;
 
-import Spring.id.entity.Exam;
+import Spring.di.entity.Exam;
 
 public class InlineExamConsole implements ExamConsole {
 
@@ -10,11 +10,13 @@ public class InlineExamConsole implements ExamConsole {
 		this.exam = exam;
 	}
 
-
-
 	@Override
 	public void print() {
 		System.out.printf("total is %d, avg is %f\n", exam.total(), exam.avg());
 	}
-
+	
+	@Override
+	public void setExam(Exam exam) {
+		this.exam = exam;
+	}
 }

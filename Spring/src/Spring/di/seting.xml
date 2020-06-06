@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- ExamConsole console = new GridExamConsole(); -->
+	<bean id="exam" class="Spring.di.entity.NewlecExam"></bean>
+	<bean id="console" class="Spring.di.ui.InlineExamConsole" >
+		<!-- console.setExam(exam);  -->
+		<!-- setExam에서 set을 뺴고 E을 소문자로 변경 한거임 -->
+		<!-- value 타입 하고 ref 타입이 있는데 위에 보면 ref 타입이여서 씀 -->
+		<property name="exam" ref="exam"/>
+	</bean>	
+</beans>
