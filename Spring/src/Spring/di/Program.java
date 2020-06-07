@@ -1,5 +1,8 @@
 package Spring.di;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.security.auth.login.AppConfigurationEntry;
 
 import org.springframework.context.ApplicationContext;
@@ -26,9 +29,18 @@ public class Program {
 		ApplicationContext context = 
 				new ClassPathXmlApplicationContext("Spring/di/seting.xml");
 		
+		Exam exam = context.getBean(Exam.class);
+		System.out.println(exam.toString());
 		ExamConsole console = (ExamConsole) context.getBean("console");
 		//ExamConsole console = context.getBean(ExamConsole.class);
 		console.print();
+		
+//		List<Exam> exams = new ArrayList<>();
+//		exams.add(new NewlecExam(1,1,1,1));
+//		
+//		for (Exam e : exams) {
+//			System.out.println(e);
+//		}
 		
 	}
 
