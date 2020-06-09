@@ -1,4 +1,4 @@
-package org.hello.web;
+package com.my.spring;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -24,7 +24,6 @@ public class HomeController {
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		System.out.println("æ»≥Á«œººø‰");
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
 		Date date = new Date();
